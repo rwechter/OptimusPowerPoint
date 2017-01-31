@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+    <Id>c9f37ea9-bd3a-4313-b6d4-24a8522f88f1</Id>
+    <Version>1.0</Version>
+    <ProviderName>IBM</ProviderName>
+    <DefaultLocale>EN-US</DefaultLocale>
+    <DisplayName DefaultValue="Optimus PowerPoint" />
+    <Description DefaultValue="My get PowerPoint or Word document add-in." />
+    <IconUrl DefaultValue="https://pbs.twimg.com/profile_images/818463874471067648/tEThY0fk.jpg" />
+    <Hosts>
+        <Host Name="Document" />
+        <Host Name="Presentation" />
+    </Hosts>
+    <DefaultSettings>
+        <SourceLocation DefaultValue="./AddInUI.html" />
+    </DefaultSettings>
+    <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
