@@ -19,20 +19,11 @@ function updateStatus(message) {
     var statusInfo = $('#status');
     statusInfo.innerHTML += message + "<br/>";
 }
-        function writeText(event) {
 
-            //Consult Office.js API reference to see all you can do. This just shows the simplest action. 
+function writeText(event) {
 
-            Office.context.document.setSelectedDataAsync("ExecuteFunction Works. Button ID=" + event.source.id,
-                function (asyncResult) {
-                    var error = asyncResult.error;
-                    if (asyncResult.status === "failed") {
-                        //show error. Upcoming displayDialog API will help here.
-                    }
-                    else {
-                        //show success.Upcoming displayDialog API will help here.
-                    }
-                });
-           //Required, call event.completed to let the platform know you are done processing. 
-	   event.completed();
-        }
+     //Consult Office.js API reference to see all you can do. This just shows the simplest action. 
+
+     Office.context.document.setSelectedDataAsync("ExecuteFunction Works.");
+
+}
