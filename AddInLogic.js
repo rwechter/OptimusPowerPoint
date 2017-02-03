@@ -25,5 +25,5 @@ function writeText(event) {
      //Consult Office.js API reference to see all you can do. This just shows the simplest action. 
 
      Office.context.document.setSelectedDataAsync("ExecuteFunction Works.");
-
+     event.completed();
 }
