@@ -28,13 +28,7 @@
         (function () {
             Office.initialize = function () {
                 //If you need to initialize something you can do so here.
-                if (Office.context.requirements.isSetSupported('DialogApi', 1.1)) {
-                // Use Office UI methods;
 
-
-                } else {
-                // Alternate path
-                }
             };
         })();
 
@@ -54,7 +48,13 @@
         }
 
         function displayDialog (event) {
-            Office.context.ui.displayDialogAsync("https://optimuspowerpoint.azurewebsites.net/");
+            if (Office.context.requirements.isSetSupported('DialogApi', 1.1)) {
+
+                Office.context.ui.displayDialogAsync("https://optimuspowerpoint.azurewebsites.net/");
+            } else {
+                Office.context.document.setSelectedDataAsync("ExecuteFunction Works.");
+            }
+
         }
 
 
