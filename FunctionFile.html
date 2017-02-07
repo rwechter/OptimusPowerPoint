@@ -30,7 +30,7 @@
                 //If you need to initialize something you can do so here.
                 if (Office.context.requirements.isSetSupported('DialogApi', 1.1)) {
                 // Use Office UI methods;
-                Office.context.ui.displayDialogAsync("https://optimuspowerpoint.azurewebsites.net/");
+
 
                 } else {
                 // Alternate path
@@ -51,6 +51,10 @@
                 });
            //Required, call event.completed to let the platform know you are done processing. 
 	       event.completed();
+        }
+
+        function displayDialog (event) {
+            Office.context.ui.displayDialogAsync("https://optimuspowerpoint.azurewebsites.net/");
         }
 
 
