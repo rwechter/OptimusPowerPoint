@@ -15,11 +15,14 @@
         -->
 
     <!--Notice that during the preview, Office.js must be referenced from this interim location -->
-    <script src="https://officejscommands.azurewebsites.net/office.js" type="text/javascript"></script>
-    
-    
+    <!--<script src="https://officejscommands.azurewebsites.net/office.js" type="text/javascript"></script> -->
 
-    
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
+
+
+
+
+
     <script>
         // The initialize function must be run each time a new page is loaded
         (function () {
@@ -29,7 +32,7 @@
             };
         })();
 
-            //Notice function needs to be in global namespace
+        //Notice function needs to be in global namespace
         function writeText(event) {
 
             //Consult Office.js API reference to see all you can do. This just shows the simplest action. 
@@ -41,8 +44,10 @@
                     }
                 });
            //Required, call event.completed to let the platform know you are done processing. 
-	   event.completed();
+	       event.completed();
         }
+
+
 
     </script>
 </head>
