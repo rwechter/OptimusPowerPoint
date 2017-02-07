@@ -26,9 +26,15 @@
     <script>
         // The initialize function must be run each time a new page is loaded
         (function () {
-            Office.initialize = function (reason) {
-               //If you need to initialize something you can do so here.
-               Office.context.document.setSelectedDataAsync("ExecuteFunction Works.");
+            Office.initialize = function () {
+                //If you need to initialize something you can do so here.
+                if (Office.context.requirements.isSetSupported('DialogApi', 1.1)) {
+                // Use Office UI methods;
+                Office.context.ui.displayDialogAsync(startAddress, options, callback);
+
+                } else {
+                // Alternate path
+                }
             };
         })();
 
